@@ -1,6 +1,6 @@
 # lidarr
 
-![Version: 7.0.1](https://img.shields.io/badge/Version-7.0.1-informational?style=flat-square) ![AppVersion: 0.8.0.1886](https://img.shields.io/badge/AppVersion-0.8.0.1886-informational?style=flat-square)
+![Version: 7.2.0](https://img.shields.io/badge/Version-7.2.0-informational?style=flat-square) ![AppVersion: 0.8.0.1886](https://img.shields.io/badge/AppVersion-0.8.0.1886-informational?style=flat-square)
 
 Looks and smells like Sonarr but made for music
 
@@ -19,7 +19,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://k8s-at-home.com/charts/ | common | 3.0.1 |
+| https://k8s-at-home.com/charts/ | common | 3.1.0 |
 
 ## TL;DR
 
@@ -86,6 +86,17 @@ N/A
 | persistence.media.emptyDir | bool | `false` |  |
 | persistence.media.enabled | bool | `false` |  |
 | persistence.media.mountPath | string | `"/media"` |  |
+| probes.liveness.custom | bool | `true` |  |
+| probes.liveness.enabled | bool | `true` |  |
+| probes.liveness.spec.exec.command[0] | string | `"/usr/bin/env"` |  |
+| probes.liveness.spec.exec.command[1] | string | `"bash"` |  |
+| probes.liveness.spec.exec.command[2] | string | `"-c"` |  |
+| probes.liveness.spec.exec.command[3] | string | `"curl --fail localhost:8686/api/v1/system/status?apiKey=`IFS=\\> && while read -d \\< E C; do if [[ $E = \"ApiKey\" ]]; then echo $C; fi; done < /config/config.xml`"` |  |
+| probes.liveness.spec.failureThreshold | int | `5` |  |
+| probes.liveness.spec.initialDelaySeconds | int | `60` |  |
+| probes.liveness.spec.periodSeconds | int | `10` |  |
+| probes.liveness.spec.successThreshold | int | `1` |  |
+| probes.liveness.spec.timeoutSeconds | int | `10` |  |
 | service.port.port | int | `8686` |  |
 | strategy.type | string | `"Recreate"` |  |
 

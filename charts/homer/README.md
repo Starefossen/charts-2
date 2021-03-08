@@ -1,6 +1,6 @@
 # homer
 
-![Version: 3.0.1](https://img.shields.io/badge/Version-3.0.1-informational?style=flat-square) ![AppVersion: 20.09.1](https://img.shields.io/badge/AppVersion-20.09.1-informational?style=flat-square)
+![Version: 3.1.0](https://img.shields.io/badge/Version-3.1.0-informational?style=flat-square) ![AppVersion: 20.09.1](https://img.shields.io/badge/AppVersion-20.09.1-informational?style=flat-square)
 
 A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.
 
@@ -18,7 +18,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://k8s-at-home.com/charts/ | common | 3.0.1 |
+| https://k8s-at-home.com/charts/ | common | 3.1.0 |
 
 ## TL;DR
 

@@ -1,6 +1,6 @@
 # tautulli
 
-![Version: 7.0.1](https://img.shields.io/badge/Version-7.0.1-informational?style=flat-square) ![AppVersion: v2.6.6](https://img.shields.io/badge/AppVersion-v2.6.6-informational?style=flat-square)
+![Version: 7.1.0](https://img.shields.io/badge/Version-7.1.0-informational?style=flat-square) ![AppVersion: v2.6.6](https://img.shields.io/badge/AppVersion-v2.6.6-informational?style=flat-square)
 
 A Python based monitoring and tracking tool for Plex Media Server
 
@@ -19,7 +19,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://k8s-at-home.com/charts/ | common | 3.0.1 |
+| https://k8s-at-home.com/charts/ | common | 3.1.0 |
 
 ## TL;DR
 
